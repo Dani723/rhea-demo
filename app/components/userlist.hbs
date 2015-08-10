@@ -1,0 +1,14 @@
+{{#rhea-collection response=response iri=iri goto=(action goto) as |item select|}}
+  <li role="option" aria-selected="false" {{action select}}>
+    <div class="" horizontal layout>
+      <div layout vertical center-justified>
+          <i class="fa fa-bug fa-2x"></i>
+      </div>
+      <div flex>
+        <div style="padding-left:1em">
+          <span><h3>User {{json-ld-shortid item}}</h3></span>
+        </div>
+      </div>
+    </div>
+  </li>
+{{/rhea-collection}}

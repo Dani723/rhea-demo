@@ -1,0 +1,76 @@
+{
+  "name": "rhea-app",
+  "version": "0.2.0",
+  "author": {
+    "name": "n-fuse GmbH",
+    "email": "info@n-fuse.de",
+    "url": "www.n-fuse.de"
+  },
+  "contributors": [],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/n-fuse/rhea"
+  },
+  "style": "./app/style/index.styl",
+  "devDependencies": {
+    "browser-sync": "^2.7.1",
+    "gulp": "^3.8.7",
+    "gulp-autoprefixer": "^1.0.0",
+    "gulp-concat": "^2.4.1",
+    "gulp-csso": "^0.2.9",
+    "gulp-load-plugins": "^0.6.0",
+    "gulp-rename": "^1.2.0",
+    "gulp-size": "^1.1.0",
+    "gulp-uglify": "^1.0.1",
+    "jspm": "latest",
+    "promise": "^7.0.3",
+    "gulp-vcl-preprocessor": "vcl/gulp-vcl-preprocessor",
+    "vcl-default-theme": "vcl/default-theme",
+    "vcl-default-theme-terms": "vcl/default-theme-terms",
+    "vcl-font-awesome": "vcl/font-awesome",
+    "vcl-core-modules": "vcl/core-modules"
+  },
+  "jspm": {
+    "registry": "jspm",
+    "format": "es6",
+    "directories": {
+      "baseURL": "app"
+    },
+    "dependencies": {
+      "ember": "github:components/ember@2.0.0-beta.4",
+      "hbs": "github:n-fuse/plugin-ember-hbs@shim-free",
+      "jquery": "github:components/jquery@^2.1.4",
+      "lodash": "github:lodash/lodash@^3.8.0",
+      "log": "github:n-fuse/holzfella@^0.1.0",
+      "rhea": "github:n-fuse/rhea@master"
+    },
+    "devDependencies": {
+      "babel": "npm:babel-core@^5.1.13",
+      "babel-runtime": "npm:babel-runtime@^5.1.13",
+      "core-js": "npm:core-js@^0.9.4"
+    },
+    "overrides": {
+      "github:components/ember@2.0.0-beta.4": {
+        "main": "ember.debug",
+        "files": [
+          "ember.debug",
+          "ember-template-compiler"
+        ],
+        "shim": {
+          "ember.debug": {
+            "format": "global",
+            "deps": [
+              "jquery"
+            ],
+            "exports": "Ember"
+          }
+        }
+      },
+      "github:josdejong/jsoneditor@4.2.1": {
+        "format": "cjs",
+        "main": "dist/jsoneditor"
+      }
+    }
+  }
+}

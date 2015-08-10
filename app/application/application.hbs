@@ -1,0 +1,51 @@
+<div class="vclApp" layout vertical>
+  <header>
+    <div class="vclToolbar vclScale120p" role="menubar" aria-level="1" horizontal center layout>
+      <div class="vclIcogram rheaDLCol1" flex horizontal begin-justified layout>
+        <a href="#" horizontal layout center>
+          <img class="vclIcon" style="height: 2em; padding-left: 0.5em; padding-top: 0.2em;" aria-hidden="false" aria-label="home" src="/icons/invend_ci_logo_square-256x256.png">
+          <span style="line-height: 2.4em;" class="vclText">
+            Rhea
+          </span>
+        </a>
+      </div>
+      <div flex begin-justified layout style="padding-left: 0.5em; padding-right: 0.5em; padding-top: 0.5em;">
+        <div class="vclInputGroup">
+          {{input class="vclInput" enter="open" type="text" id="iri" value=iri}}
+          <span class="vclInputGroupButton">
+            <button type="button" class="vclButton" {{action "g"}}>
+              <div class="vclIcogram">
+                <div class="vclIcon fa fa-refresh" aria-hidden="true" role="img"></div>
+              </div>
+            </button>
+          </span>
+        </div>
+      </div>
+      <div>
+        {{rhea-settings-button click=(action 'open' 'settings' target=layers)}}
+        {{#rhea-block-layer id="settings" as |close|}}
+          {{rhea-settings}}
+        {{/rhea-block-layer}}
+
+        {{rhea-tasks-button action=(action 'open' 'tasks' target=layers)}}
+        {{#rhea-block-layer id="tasks"}}
+          {{rhea-tasklist}}
+        {{/rhea-block-layer}}
+
+        {{rhea-user-login-button login=(action 'open' 'login' target=layers)}}
+        {{#rhea-block-layer id="login" as |close fail|}}
+          {{rhea-user-login authN=authN loginSucceed=(action close) loginFail=(action fail)}}
+        {{/rhea-block-layer}}
+
+      </div>
+    </div>
+  </header>
+  <section class="vclContentArea" flex layout horizontal relative role="main">
+    <div class="vclDataList vclRowHoverHighlight rheaDLCol1" vertical layout flex>
+      {{rhea-resources resources=model action="goto"}}
+    </div>
+    <div vertical layout flex>
+      {{outlet}}
+    </div>
+  </section>
+</div>

@@ -19,7 +19,7 @@ System.config({
     "babel": "npm:babel-core@5.8.19",
     "babel-runtime": "npm:babel-runtime@5.8.19",
     "core-js": "npm:core-js@0.9.18",
-    "ember": "github:components/ember@2.0.0-beta.4",
+    "ember": "github:components/ember@2.0.0-beta.5",
     "hbs": "github:n-fuse/plugin-ember-hbs@shim-free",
     "jquery": "github:components/jquery@2.1.4",
     "lodash": "github:lodash/lodash@3.10.1",
@@ -27,22 +27,22 @@ System.config({
     "rhea": "github:n-fuse/rhea@master",
     "github:ember-vcl/ace-editor@0.1.1": {
       "ace": "github:ajaxorg/ace-builds@1.2.0",
-      "ember": "github:components/ember@2.0.0-beta.4",
+      "ember": "github:components/ember@2.0.0-beta.5",
       "ember-vcl-util": "github:ember-vcl/util@0.1.1"
     },
     "github:jspm/nodelibs-process@0.1.1": {
       "process": "npm:process@0.10.1"
     },
     "github:n-fuse/ember-locale-set@0.1.5": {
-      "ember": "github:components/ember@2.0.0-beta.4",
+      "ember": "github:components/ember@2.0.0-beta.5",
       "locale-set": "github:n-fuse/locale-set@0.1.7"
     },
     "github:n-fuse/ember-token-authn@0.2.1": {
-      "ember": "github:components/ember@2.0.0-beta.4",
+      "ember": "github:components/ember@2.0.0-beta.5",
       "token-authn": "github:n-fuse/token-authn@0.2.4"
     },
     "github:n-fuse/ember-utils@0.2.0": {
-      "ember": "github:components/ember@2.0.0-beta.4",
+      "ember": "github:components/ember@2.0.0-beta.5",
       "log": "github:n-fuse/holzfella@0.1.0"
     },
     "github:n-fuse/hyjax@0.2.1": {
@@ -57,10 +57,10 @@ System.config({
       "store": "npm:store@1.3.17"
     },
     "github:n-fuse/plugin-ember-hbs@shim-free": {
-      "ember": "github:components/ember@2.0.0-beta.4"
+      "ember": "github:components/ember@2.0.0-beta.5"
     },
     "github:n-fuse/rhea@master": {
-      "ember": "github:components/ember@2.0.0-beta.4",
+      "ember": "github:components/ember@2.0.0-beta.5",
       "ember-locale-set": "github:n-fuse/ember-locale-set@0.1.5",
       "ember-token-authn": "github:n-fuse/ember-token-authn@0.2.1",
       "ember-utils": "github:n-fuse/ember-utils@0.2.0",
@@ -86,9 +86,6 @@ System.config({
       "store": "npm:store@1.3.17"
     },
     "npm:babel-runtime@5.8.19": {
-      "process": "github:jspm/nodelibs-process@0.1.1"
-    },
-    "npm:babel-runtime@5.8.20": {
       "process": "github:jspm/nodelibs-process@0.1.1"
     },
     "npm:core-js@0.9.18": {
